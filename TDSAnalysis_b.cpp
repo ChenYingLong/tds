@@ -22,15 +22,15 @@ void TDSAnalysis::fn_TDS_REPLY()
 	fileOut.open(F_REPLY, std::ios::out | ios::app);
 
 	writeTdsHead(fileOut);
-	const u_char *tds = tds_data ;
+	const u_char *tds = tds_data;
 	switch (tds[8])//Token type
 	{
-		case TDS_COLMETADATA_TOKEN:
-			fn_COLMETADATA_TOKEN(fileOut);
-			break;
-		default:
-			cout << "Unknown TokenType:6" << setw(2) << (int)tds[8] << endl;
-			break;
+	case TDS_COLMETADATA_TOKEN:
+		fn_COLMETADATA_TOKEN(fileOut);
+		break;
+	default:
+		cout << "Unknown TokenType:6" << setw(2) << (int)tds[8] << endl;
+		break;
 	}
 	/*
 	for (int i = 0; i < tds_info->caplen - tds_data_off - 8; i++)
@@ -64,7 +64,7 @@ void TDSAnalysis::fn_TDS_REPLY()
 /************************************************************************/
 void TDSAnalysis::fn_TDS7_PRELOGIN()
 {
-	const u_char *tds = tds_data ;
+	const u_char *tds = tds_data;
 	LONG32 total_Length = 0;
 	std::ofstream fileOut;
 	fileOut.open(F_PRELOGIN, std::ios::out | ios::app);
@@ -125,51 +125,57 @@ void TDSAnalysis::fn_TDS_RPC()
 	fileOut.open(F_RPC, std::ios::out | ios::app);
 	//包头
 	writeTdsHead(fileOut);
-	int i = 7;
+	int i = 8;
 	fileOut << "<PacketData>\n";
 	fileOut << "	<RPCRequest>\n";
-	fileOut << "	  <All_HEADERS>\n";
-	fileOut << "		<TotalLength>\n";
-	//total_Length = tds[i + 1] + (tds[i + 2] << 8) + (tds[i + 2] << 16) + (tds[i + 2] << 24);
-	fileOut << "		" << setw(2) << (int)tds[i + 1] << setw(2) << (int)tds[i + 2] << setw(2) << (int)tds[i + 3] << setw(2) << (int)tds[i + 4] << "\n";
-	fileOut << "		</TotalLength>\n";
-	i += 4;
-	fileOut << "		<Header>\n";
-	fileOut << "			<HeaderLength>\n";
-	fileOut << "			" << setw(2) << (int)tds[i + 1] << setw(2) << (int)tds[i + 2] << setw(2) << (int)tds[i + 3] << setw(2) << (int)tds[i + 4] << "\n";
-	i += 4;
-	fileOut << "			</HeaderLength>\n";
-	fileOut << "			<HeaderType>\n";
-	fileOut << "			" << setw(2) << (int)tds[1 + i] << setw(2) << (int)tds[2 + i] << "\n";
-	i += 2;
-	fileOut << "			</HeaderType>\n";
-	fileOut << "			<HeaderData>\n";
-	fileOut << "			<MARS>\n";
-	fileOut << "				<TransactionDescriptor>\n";
-	fileOut << "				" << setw(2) << (int)tds[i + 1] << setw(2) << (int)tds[i + 2] << setw(2) << (int)tds[i + 3] << setw(2) << (int)tds[i + 4] << setw(2) << (int)tds[i + 5] << setw(2) << (int)tds[i + 6] << setw(2) << (int)tds[i + 7] << setw(2) << (int)tds[i + 8] << "\n";
-	i += 8;
-	fileOut << "				</TransactionDescriptor>\n";
-	fileOut << "				<OutstandingRequestCount>\n";
-	fileOut << "				" << setw(2) << (int)tds[i + 1] << setw(2) << (int)tds[i + 2] << setw(2) << (int)tds[i + 3] << setw(2) << (int)tds[i + 4] << "\n";
-	i += 4;
-	fileOut << "				</OutstandingRequestCount>\n";
-	fileOut << "			</MARS>\n";
-	fileOut << "			</HeaderData>\n";
-	fileOut << "		</Header>\n";
-	fileOut << "	  </All_HEADERS>\n";
+	//当一个消息跨多个包时，第一个包有All_HEADERS，其余的包没有All_HEADERS
+	//
+	int allHeaderLen = tds[8] + (tds[9] << 8) + (tds[10] << 16) + (tds[11] << 24);
+	int headerLen = tds[12] + (tds[13] << 8) + (tds[14] << 16) + (tds[15] << 24);
+	if (allHeaderLen == 22 && headerLen == 18)//在测试和文档上，allHeaderLen长度为22,headerLen=18，否则就没有allHeaderLen 
+	{
+		fileOut << "	  <All_HEADERS>\n";
+		fileOut << "		<TotalLength>\n";
 
+		fileOut << "		" << setw(2) << (int)tds[i] << setw(2) << (int)tds[i + 1] << setw(2) << (int)tds[i + 2] << setw(2) << (int)tds[i + 3] << endl;
+		fileOut << "		</TotalLength>\n";
+		i += 4;
+		fileOut << "		<Header>\n";
+		fileOut << "			<HeaderLength>\n";
+		fileOut << "		    " << setw(2) << (int)tds[i] << setw(2) << (int)tds[i + 1] << setw(2) << (int)tds[i + 2] << setw(2) << (int)tds[i + 3] << endl;
+		i += 4;
+		fileOut << "			</HeaderLength>\n";
+		fileOut << "			<HeaderType>\n";
+		fileOut << "			" << setw(2) << (int)tds[i] << setw(2) << (int)tds[1 + i] << endl;
+		i += 2;
+		fileOut << "			</HeaderType>\n";
+		fileOut << "			<HeaderData>\n";
+		fileOut << "			<MARS>\n";
+		fileOut << "				<TransactionDescriptor>\n";
+		fileOut << "				" << setw(2) << (int)tds[i] << setw(2) << (int)tds[i + 1] << setw(2) << (int)tds[i + 2] << setw(2) << (int)tds[i + 3] << setw(2) << (int)tds[i + 4] << setw(2) << (int)tds[i + 5] << setw(2) << (int)tds[i + 6] << setw(2) << (int)tds[i + 7] << endl;
+		i += 8;
+		fileOut << "				</TransactionDescriptor>\n";
+		fileOut << "				<OutstandingRequestCount>\n";
+		fileOut << "				" << setw(2) << (int)tds[i] << setw(2) << (int)tds[i + 1] << setw(2) << (int)tds[i + 2] << setw(2) << (int)tds[i + 3] << endl;
+		i += 4;
+		fileOut << "				</OutstandingRequestCount>\n";
+		fileOut << "			</MARS>\n";
+		fileOut << "			</HeaderData>\n";
+		fileOut << "		</Header>\n";
+		fileOut << "	  </All_HEADERS>\n";
+	}
+	
 	fileOut << "		<RPCReqBatch>\n";
-
 	fileOut << "			<NameLenProcID>\n";
 
-	if (tds[i + 1] == 0xff && tds[i + 2] == 0xff)
+	if (tds[i] == 0xff && tds[i + 1] == 0xff)
 	{
 		fileOut << "			  <ProcIDSwitch>\n";
-		fileOut << "			    " << setw(2) << (int)tds[i + 1] << setw(2) << (int)tds[i + 2] << "\n";
+		fileOut << "			    " << setw(2) << (int)tds[i] << setw(2) << (int)tds[i + 1] << endl;
 		fileOut << "			  </ProcIDSwitch>\n";
 		i += 2;
 		fileOut << "			  <ProcID>\n";
-		fileOut << "			    " << setw(2) << (int)tds[i + 1] << setw(2) << (int)tds[i + 2] << endl;
+		fileOut << "			    " << setw(2) << (int)tds[i] << setw(2) << (int)tds[i + 1] << endl;
 		fileOut << "			  </ProcID>\n";
 		i += 2;
 	}
@@ -178,13 +184,14 @@ void TDSAnalysis::fn_TDS_RPC()
 		fileOut << "			  <ProcName>\n";
 		fileOut << "			    <US_UNICODE>\n";
 		fileOut << "			      <USHORTLEN>\n";
-		u_short ushortLen = tds[i + 1] + (tds[i + 2] << 8);
-		fileOut << "			        " << setw(2) << (int)tds[i + 1] << setw(2) << (int)tds[i + 2] << endl;
+		u_short ushortLen = tds[i] + (tds[i + 1] << 8);
+		fileOut << "			        " << setw(2) << (int)tds[i] << setw(2) << (int)tds[i + 1] << endl;
 		i += 2;
 		fileOut << "			      </USHORTLEN>\n";
 		fileOut << "			      <BYTES>";
-		for (int j = i + 1; j < 2 * ushortLen + i + 1; j++)
-			fileOut << tds[j++];
+		//fileOut.write((const char*)tds, ushortLen * 2);
+		for (int tmpi = 0; tmpi < ushortLen * 2; tmpi += 2)
+			fileOut << (char)tds[i + tmpi];
 		i += 2 * ushortLen;
 		fileOut << "			      </BYTES>\n";
 
@@ -195,68 +202,77 @@ void TDSAnalysis::fn_TDS_RPC()
 	fileOut << "			</NameLenProcID>\n";
 
 	fileOut << "			<OptionFlags>\n";
-	fileOut << "			  <fWithRecomp>" << (tds[i + 1] & 0x01) << "</fWithRecomp>\n";
-	fileOut << "			  <fNoMetaData>" << (tds[i + 1] & 0x02) << "</fNoMetaData>\n";
-	fileOut << "			  <fReuseMetaData>" << (tds[i + 1] & 0x08) << "</fReuseMetaData>\n";
+	fileOut << "			  " << setw(2) << (int)tds[i] << setw(2) << (int)tds[i + 1] << endl;
 	fileOut << "			</OptionFlags>\n";
-	i += 1;
+	i += 2;
 	//TDS7.4版本还添加了一些其它的，此处未加入
-	fileOut << "			<ParameterData>\n";
-	fileOut << "			  <ParamMetaData>\n";
-	fileOut << "			    <B_UNICODE>\n";
-	fileOut << "			      <BYTELEN>\n";
-	int byteLen = int(tds[i + 1]);
-	fileOut << "			        " << setw(2) << byteLen << endl;
-	i += 1;
-	fileOut << "			      </BYTELEN>\n";
-	fileOut << "			      <BYTES>";
-	for (int j = i + 1; j < 2 * byteLen + i + 1; j++)
-		fileOut << tds[j++];
-	i += 2 * byteLen;
-	fileOut << "			      </BYTES>\n";
-	fileOut << "			    </B_UNICODE>\n";
+	while (i < tds_head.size)
+	{
+		//<ParameterData>
+		fileOut << "<ParameterData>" << endl;
+		//name length
+		fileOut << "	<Name Length>:";
+		uint8_t byteLen = tds[i];
+		fileOut << setw(2) << (int)byteLen << endl;
+		i += 1;
 
-	fileOut << "			    <StatusFlags>\n";
-	fileOut << "				  <fByRefValue>" << (tds[i + 1] & 0x01) << "</fByRefValue>\n";
-	fileOut << "				  <fDefaultValue>" << (tds[i + 1] & 0x02) << "</fDefaultValue>\n";
-	fileOut << "				  <fEncrypted>" << (tds[i + 1] & 0x10) << "</fEncrypted>\n";
-	fileOut << "			    </StatusFlags>\n";
-	i += 1;
+		//name
+		if (byteLen > 0)
+		{
+			fileOut << "	<NAME>:";
+			//fileOut.write((const char*)(tds + i), 2 * byteLen);
+			for (int tmpi = 0; tmpi < byteLen * 2; tmpi += 2)
+				fileOut << (char)tds[i + tmpi];
+			i += 2 * byteLen;
+			fileOut << endl;
+		}
 
-	//TDS7.3之后
-	fileOut << "			    <TYPE_INFO>\n";
-	fileOut << "			      <VARLENTYPE>\n";
-	fileOut << "			        <BYTELEN_TYPE>\n";
-	fileOut << "			          " << setw(2) << (int)tds[i + 1] << endl;
-	fileOut << "			        </BYTELEN_TYPE>\n";
-	i += 1;
-	fileOut << "			      </VARLENTYPE>\n";
+		fileOut << "	<StatusFlags>:";
+		fileOut << setw(2) << (int)tds[i] << endl;
+		i += 1;
 
-	fileOut << "			      <TYPE_VARLEN>\n";
-	fileOut << "			        <BYTELEN>\n";
-	fileOut << "			          " << setw(2) << (int)tds[i + 1] << endl;
-	fileOut << "			        </BYTELEN>\n";
-	i += 1;
-	fileOut << "			      </TYPE_VARLEN>\n";
-	fileOut << "			    </TYPE_INFO>\n";
-	fileOut << "			  </ParamMetaData>\n";
+		//TDS7.3之后
+		//TYPE_INFO
+		fileOut << "	<TYPE_INFO>" << endl;
+		fileOut << "		<TYPE>:";
+		uint8_t type = tds[i];
+		fileOut << setw(2) << (int)type << endl;
+		i += 1;
+		//其它的type还没有考虑
+		if (type == 0xE7 || type == 0xAF || type == 0x23 || type == 0x63 || type == 0xEF || type == 0xA7)
+		{
+			//Maximal length
+			fileOut << "		<Maximal length>:";
+			fileOut << setw(2) << (int)tds[i] << setw(2) << (int)tds[i + 1] << endl;
+			i += 2;
+			//COLLATION
+			fileOut << "		<COLLATION>:";
+			for (int tmpi = 0; tmpi < 5; tmpi++)//5字节的COLLATION
+			{
+				fileOut << setw(2) << (int)tds[i + tmpi];
+			}
+			i += 5;
+			fileOut << endl;
 
-	fileOut << "			  <ParamLenData>\n";
-	fileOut << "			    <TYPE_VARBYTE>\n";
-	fileOut << "			        <BYTELEN>\n";
-	byteLen = int(tds[i + 1]);
-	fileOut << "			          " << setw(2) << byteLen << endl;
-	fileOut << "			        </BYTELEN>\n";
-	i += 1;
-	fileOut << "			      <BYTES>";
-	for (int j = i + 1; j < 2 * byteLen + i + 1; j++)
-		fileOut << tds[j++];
-	i += 2 * byteLen;
-	fileOut << "			      </BYTES>\n";
+			uint16_t valueLen = tds[i] + (tds[i + 1] << 8);
+			fileOut << "	<VALUE>\n";
+			fileOut << "	  <Length>:";
+			fileOut << setw(2) << (int)tds[i] << setw(2) << (int)tds[i + 1] << endl;
+			i += 2;
 
-	fileOut << "			    </TYPE_VARBYTE>\n";
-	fileOut << "			  </ParamLenData>\n";
-	fileOut << "			</ParameterData>\n";
+			fileOut << "	  <DATA>:";
+			//fileOut.write((const char*)(tds + i), valueLen);
+			for (int tmpi = 0; tmpi < valueLen; tmpi += 2)
+				fileOut << (char)tds[i + tmpi];
+			i += valueLen;
+			fileOut << endl;
+		}
+		else
+		{
+			fileOut << "unknow type" << endl;
+			break;
+		}
+	}
 	fileOut << "		</RPCReqBatch>\n";
 	fileOut << "	</RPCRequest>\n";
 	fileOut << "</PacketData>\n\n\n";
