@@ -1,0 +1,1024 @@
+PacketHeader:
+Type:    12
+Status:  01
+Length:  002f
+SPID:    0000
+PacketID:01
+Window:  00
+<PacketData>
+	<Prelogin>
+		<TokenType>
+		00
+		</TokenType>
+		<TokenPosition>
+		001a
+		</TokenPosition>
+		<TokenLeng>
+		0006
+		</TokenLeng>
+		<TokenType>
+		01
+		</TokenType>
+		<TokenPosition>
+		0020
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		02
+		</TokenType>
+		<TokenPosition>
+		0021
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		03
+		</TokenType>
+		<TokenPosition>
+		0022
+		</TokenPosition>
+		<TokenLeng>
+		0004
+		</TokenLeng>
+		<TokenType>
+		04
+		</TokenType>
+		<TokenPosition>
+		0026
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		ff
+		</TokenType>
+		<PreloginData>
+			1000000000000000000000ec00		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0067
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+160301005a010000560301570f56acba461b6dcc0b9735951139fb1b027f732beb3e0e2f572996f2d1b3bd000018002f00350005000ac013c014c009c00a003200380013000401000015ff01000100000a0006000400170018000b00020100		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0269
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+160301025c0200004d0301570f56acc4b842c86f5748136c5f2ddb1976ccd88cbb01182c5505727a356b71206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d52774002f000005ff010001000b0002030002000001fd308201f930820162a0030201020210587a24565784379f49511cc3197b1a17300d06092a864886f70d0101050500303b3139303706035504031e3000530053004c005f00530065006c0066005f005300690067006e00650064005f00460061006c006c006200610063006b301e170d3136303431343030323433315a170d3436303431343030323433315a303b3139303706035504031e3000530053004c005f00530065006c0066005f005300690067006e00650064005f00460061006c006c006200610063006b30819f300d06092a864886f70d010101050003818d0030818902818100e6f8d404d417ab93265660101691754c62f72607d3a1ffbdb8a60616305969b4f33377d8d80e46231229d5b2af3a92351f4f2682e2cb2d1b5ac7bc664b24f22eb1bfa773a129f373f1c2e535499bccc10eb7a1758d5e38f92bb50c8d1aee4234f25cf796693aff792d8d7f9f5c5a145c5d5ab9a5fec25a7ba6f8904071e6063f0203010001300d06092a864886f70d0101050500038181005f9737b528c4397bd7cc356b17e0cf749b69502608a33ab9f55a7713dc0f0745aaa78e499d61a1826e780b8cc6933b0a8f1ddcd78fad0cb83182d3e5ac5aebb6d616d7618ca1703c34556a94f42741c90b38272e635fb508a7c13ff4f684727107a5d4f55973952d44202ea39fd1ca78a476a797d186840abeffa52f7850a5ac0e000000		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  00ce
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+160301008610000082008089d1852dd35f17354172b6269564920f22d347d5203ca3fa601ab69b5ddbbf8721a34a79fba759deaf23985a9863c913a75889083b13da53917e0583f726b5bcfb4689ec7afb4e1b193c21fee2085f7c066d2cf3ca26bfff90faa39a4812f3eea08ad03d667ae954700ec01a2bdafb91b11bdde6cf7680c98e5d153f688dba2b14030100010116030100303954024cbcfe980de42f1531de73ce96c9477d0e6880b4e996d438f11c86cf03169e78948d58b8c79dd8bee82552fb35		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0043
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+140301000101160301003028bd242ca0cb91ab0edcd1e6966ea8870dbfe4bc616d7602d044af2c4544f05d53fa1df5babb02d0846c01ee00ffeb32		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  002f
+SPID:    0000
+PacketID:01
+Window:  00
+<PacketData>
+	<Prelogin>
+		<TokenType>
+		00
+		</TokenType>
+		<TokenPosition>
+		001a
+		</TokenPosition>
+		<TokenLeng>
+		0006
+		</TokenLeng>
+		<TokenType>
+		01
+		</TokenType>
+		<TokenPosition>
+		0020
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		02
+		</TokenType>
+		<TokenPosition>
+		0021
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		03
+		</TokenType>
+		<TokenPosition>
+		0022
+		</TokenPosition>
+		<TokenLeng>
+		0004
+		</TokenLeng>
+		<TokenType>
+		04
+		</TokenType>
+		<TokenPosition>
+		0026
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		ff
+		</TokenType>
+		<PreloginData>
+			10000000000000000000006400		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0087
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+160301007a010000760301570f56ac883bde80ca7d5a3769a1d60de8cf1e8d9798fcebae9ac1542124c2d6206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d527740018002f00350005000ac013c014c009c00a003200380013000401000015ff01000100000a0006000400170018000b00020100		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0099
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+16030100510200004d0301570f56ac7cac824c7edd93311be34f6ae40e46845e59421e023499e797dac212206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d52774002f000005ff0100010014030100010116030100309b54c4d844c3d12abbc8b9e5669ad827122342c3e41190c6eb0c29a3a6b5e9b3277a19ed5f7bdecdf538cdbf89782e90		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0043
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+1403010001011603010030f6cb65153287a2222c7e15db02202c4600c1f11a8a18b5e25f1419e5c0f8d48f682ca0f32254b577b132462e72954a0e		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  002f
+SPID:    0000
+PacketID:01
+Window:  00
+<PacketData>
+	<Prelogin>
+		<TokenType>
+		00
+		</TokenType>
+		<TokenPosition>
+		001a
+		</TokenPosition>
+		<TokenLeng>
+		0006
+		</TokenLeng>
+		<TokenType>
+		01
+		</TokenType>
+		<TokenPosition>
+		0020
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		02
+		</TokenType>
+		<TokenPosition>
+		0021
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		03
+		</TokenType>
+		<TokenPosition>
+		0022
+		</TokenPosition>
+		<TokenLeng>
+		0004
+		</TokenLeng>
+		<TokenType>
+		04
+		</TokenType>
+		<TokenPosition>
+		0026
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		ff
+		</TokenType>
+		<PreloginData>
+			1000000000000000000000b400		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0087
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+160301007a010000760301570f56add1a71861eba12d8ed3b59205c50b3869584f5c0bdb8dbcfba6ee9f8f206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d527740018002f00350005000ac013c014c009c00a003200380013000401000015ff01000100000a0006000400170018000b00020100		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0099
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+16030100510200004d0301570f56adc6c098efa66cf25ffc67908385fe077e1a03214a598e97b2596bf10b206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d52774002f000005ff010001001403010001011603010030049e3937cc3863449daedb23c40599c86690dc789a7d9b94ac5345f31f56917bcd4ff24607ac279c19c8ab664f735399		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0043
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+1403010001011603010030d8110f51012df5085c15662439903473ff136043d3173c544c533ce3a704a4fe298744551d1fd8ae4d9c0eb83773b9fd		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  002f
+SPID:    0000
+PacketID:01
+Window:  00
+<PacketData>
+	<Prelogin>
+		<TokenType>
+		00
+		</TokenType>
+		<TokenPosition>
+		001a
+		</TokenPosition>
+		<TokenLeng>
+		0006
+		</TokenLeng>
+		<TokenType>
+		01
+		</TokenType>
+		<TokenPosition>
+		0020
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		02
+		</TokenType>
+		<TokenPosition>
+		0021
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		03
+		</TokenType>
+		<TokenPosition>
+		0022
+		</TokenPosition>
+		<TokenLeng>
+		0004
+		</TokenLeng>
+		<TokenType>
+		04
+		</TokenType>
+		<TokenPosition>
+		0026
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		ff
+		</TokenType>
+		<PreloginData>
+			1000000000000000000000a400		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0087
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+160301007a010000760301570f56ca06ac8a04729f2989e2b6a4663d10ab810edef5e2c8d11e762ac5757c206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d527740018002f00350005000ac013c014c009c00a003200380013000401000015ff01000100000a0006000400170018000b00020100		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0099
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+16030100510200004d0301570f56ca5a07449823b09a2f69cf0d0960f6a1e730bb517e6b7cd419b07217d5206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d52774002f000005ff010001001403010001011603010030e2dc5da2d2c268a4cca0b5f3197192f644b15da710e4a96f7b2521e524c30a502dd58bfa208a2362b0e9fd72445bb6a6		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0043
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+1403010001011603010030e7631eb4a27e5b98ae55f7fd445e3ab3596b38bf336275243a0f14818af49d926369b8e0160878d59d4fa485fe52c0d4		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  002f
+SPID:    0000
+PacketID:01
+Window:  00
+<PacketData>
+	<Prelogin>
+		<TokenType>
+		00
+		</TokenType>
+		<TokenPosition>
+		001a
+		</TokenPosition>
+		<TokenLeng>
+		0006
+		</TokenLeng>
+		<TokenType>
+		01
+		</TokenType>
+		<TokenPosition>
+		0020
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		02
+		</TokenType>
+		<TokenPosition>
+		0021
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		03
+		</TokenType>
+		<TokenPosition>
+		0022
+		</TokenPosition>
+		<TokenLeng>
+		0004
+		</TokenLeng>
+		<TokenType>
+		04
+		</TokenType>
+		<TokenPosition>
+		0026
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		ff
+		</TokenType>
+		<PreloginData>
+			10000000000000000000006400		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0087
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+160301007a010000760301570f56cabe9c741e73ec1d5e73eb9d3dc26041727b416b25b67d6b86bf84ee25206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d527740018002f00350005000ac013c014c009c00a003200380013000401000015ff01000100000a0006000400170018000b00020100		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0099
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+16030100510200004d0301570f56cad0e2f52869b7b54fe3f707d6ffede47b56e95e3a33c7db849f4c8c4c206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d52774002f000005ff0100010014030100010116030100309ceacd714ade7088444f82cbcebb4dbf041c5a1c454dd0f5a1ecc531f2774881e3c3e064ff269325939450e70f903879		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0043
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+140301000101160301003098ee85ac8328ab072185ff1f0e2fd7fe51b1222a9e68f6aa8217bfef5372c4a65c7bad58ba3f5697353c30356a4ed129		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  002f
+SPID:    0000
+PacketID:01
+Window:  00
+<PacketData>
+	<Prelogin>
+		<TokenType>
+		00
+		</TokenType>
+		<TokenPosition>
+		001a
+		</TokenPosition>
+		<TokenLeng>
+		0006
+		</TokenLeng>
+		<TokenType>
+		01
+		</TokenType>
+		<TokenPosition>
+		0020
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		02
+		</TokenType>
+		<TokenPosition>
+		0021
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		03
+		</TokenType>
+		<TokenPosition>
+		0022
+		</TokenPosition>
+		<TokenLeng>
+		0004
+		</TokenLeng>
+		<TokenType>
+		04
+		</TokenType>
+		<TokenPosition>
+		0026
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		ff
+		</TokenType>
+		<PreloginData>
+			10000000000000000000006400		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0087
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+160301007a010000760301570f56ca6ba9a90fde0b9fbdd96ac633c328f0598231b586e0cac5aab77b073b206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d527740018002f00350005000ac013c014c009c00a003200380013000401000015ff01000100000a0006000400170018000b00020100		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0099
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+16030100510200004d0301570f56caa7de32a5b845c73298416ee8f44d32dd4395f876b4f4f413eb90ff3e206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d52774002f000005ff01000100140301000101160301003005a547df0fe2845d64afba3887bb230248abf1391cefd2ec1c824cd76af410307b5010b00f17212ec61395e7eae22b57		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0043
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+1403010001011603010030a7f8980291acd235ce0b3bb5b69f09cac89a3b6d566c45abf6471c3cae80c77684ada255b60de2770e0b672ef6c349da		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  002f
+SPID:    0000
+PacketID:01
+Window:  00
+<PacketData>
+	<Prelogin>
+		<TokenType>
+		00
+		</TokenType>
+		<TokenPosition>
+		001a
+		</TokenPosition>
+		<TokenLeng>
+		0006
+		</TokenLeng>
+		<TokenType>
+		01
+		</TokenType>
+		<TokenPosition>
+		0020
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		02
+		</TokenType>
+		<TokenPosition>
+		0021
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		03
+		</TokenType>
+		<TokenPosition>
+		0022
+		</TokenPosition>
+		<TokenLeng>
+		0004
+		</TokenLeng>
+		<TokenType>
+		04
+		</TokenType>
+		<TokenPosition>
+		0026
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		ff
+		</TokenType>
+		<PreloginData>
+			10000000000000000000001800		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0087
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+160301007a010000760301570f56ca16d4bf145190bb487223ad87aea66908bf4b9d28cda5867e7a21aaef206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d527740018002f00350005000ac013c014c009c00a003200380013000401000015ff01000100000a0006000400170018000b00020100		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0099
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+16030100510200004d0301570f56cb2848aa87ae810df4d80ab6a83f0347b6092392449a9c8a3f7cee3160206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d52774002f000005ff010001001403010001011603010030f6ac10eb33caa3a8781fd23694118295e18a3dc20f45ca4c948a55142b35d1ad78e180c00c56dca7d325076d5e8ad62d		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0043
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+14030100010116030100309284998065a1a3d8b429d38f92f3ea535fdb689aa9cde05bcb9d20ad30ab51ba536d17585ec6067e54450fae6ba9b029		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  002f
+SPID:    0000
+PacketID:01
+Window:  00
+<PacketData>
+	<Prelogin>
+		<TokenType>
+		00
+		</TokenType>
+		<TokenPosition>
+		001a
+		</TokenPosition>
+		<TokenLeng>
+		0006
+		</TokenLeng>
+		<TokenType>
+		01
+		</TokenType>
+		<TokenPosition>
+		0020
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		02
+		</TokenType>
+		<TokenPosition>
+		0021
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		03
+		</TokenType>
+		<TokenPosition>
+		0022
+		</TokenPosition>
+		<TokenLeng>
+		0004
+		</TokenLeng>
+		<TokenType>
+		04
+		</TokenType>
+		<TokenPosition>
+		0026
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		ff
+		</TokenType>
+		<PreloginData>
+			10000000000000000000006400		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0087
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+160301007a010000760301570f56f9df488b7cf22e38a7af0f52a2363a929f9e9ff174258da7f65b9744ac206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d527740018002f00350005000ac013c014c009c00a003200380013000401000015ff01000100000a0006000400170018000b00020100		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0099
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+16030100510200004d0301570f56fa22a6607254781bcf31510a22aca08b1e6d1e20129692e3cc5a260197206a22000010bc35a47e1d07eee7cd2901a373a6a4aa2fa2bfef0f4db417d52774002f000005ff0100010014030100010116030100307b16b071762d3389d8021f3471d0cd438ca91969538d85412c5c081371cd5a905f89ae82e94eca9b58a7ea30a5c44136		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0043
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+140301000101160301003006ebba4fb329f42f66e2aefbcb6c18c91ad9680b5359aa7ddc1a7fc00a14a2b499ca378215b0a87cfc806a9cb61362a6		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  002f
+SPID:    0000
+PacketID:01
+Window:  00
+<PacketData>
+	<Prelogin>
+		<TokenType>
+		00
+		</TokenType>
+		<TokenPosition>
+		001a
+		</TokenPosition>
+		<TokenLeng>
+		0006
+		</TokenLeng>
+		<TokenType>
+		01
+		</TokenType>
+		<TokenPosition>
+		0020
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		02
+		</TokenType>
+		<TokenPosition>
+		0021
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		03
+		</TokenType>
+		<TokenPosition>
+		0022
+		</TokenPosition>
+		<TokenLeng>
+		0004
+		</TokenLeng>
+		<TokenType>
+		04
+		</TokenType>
+		<TokenPosition>
+		0026
+		</TokenPosition>
+		<TokenLeng>
+		0001
+		</TokenLeng>
+		<TokenType>
+		ff
+		</TokenType>
+		<PreloginData>
+			10000000000000000000001800		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0087
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+160301007a010000760301570f5700ed36cd39d007356c038cd52058bb08a9c33f4a10a0984f81066f9719205c49000050af688d7566c8b772a68637fd3e8b266adb45643fd6ef2731f1d6d30018002f00350005000ac013c014c009c00a003200380013000401000015ff01000100000a0006000400170018000b00020100		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0099
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+16030100510200004d0301570f5701ba3062567e22f8d044185f67c0c75318847b08e6845803a81160a6cc205c49000050af688d7566c8b772a68637fd3e8b266adb45643fd6ef2731f1d6d3002f000005ff0100010014030100010116030100307bd04a40759f65d085955cb8369cb19107c959427a8550b50916b216b3327d036b2fb481c2d1dac1107f3e2b1a8197fb		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+
+PacketHeader:
+Type:    12
+Status:  01
+Length:  0043
+SPID:    0000
+PacketID:00
+Window:  00
+<PacketData>
+	<Prelogin>
+		ssl加密
+1403010001011603010030a0919a986f6e84100b448ca8ce90dc0deea32f3752d03b3b1c1b81e685ea1e7f4a46eef7172d2a790ece9a8193e2201b		
+</PreloginData>
+	</Prelogin>
+</PacketData>
+
+

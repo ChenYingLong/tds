@@ -1,0 +1,1 @@
+1. TDSConn类中 TDSAnalysis m_TDSParse;改为static，所有连接共用一个解析类实例
